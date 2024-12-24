@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="651.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mindmap.ViewControllor">
+   <children>
+      <ScrollPane fx:id="scrollPane" layoutY="64.0" prefHeight="589.0" prefWidth="818.0">
+         <content>
+            <AnchorPane fx:id="paintingPane" prefHeight="587.0" prefWidth="817.0" />
+         </content></ScrollPane>
+      <Button fx:id="addBro" layoutX="254.0" layoutY="14.0" mnemonicParsing="false" onAction="#addBro" prefHeight="43.0" prefWidth="101.0" text="添加兄弟节点" />
+      <Button fx:id="leftLayout" layoutX="569.0" layoutY="14.0" mnemonicParsing="false" onAction="#leftLayout" prefHeight="43.0" prefWidth="65.0" text="左布局" />
+      <Button fx:id="addSon" layoutX="137.0" layoutY="14.0" mnemonicParsing="false" onAction="#addSon" prefHeight="43.0" prefWidth="101.0" text="添加子节点" />
+       <Button fx:id="rightLayout" layoutX="646.0" layoutY="14.0" mnemonicParsing="false" onAction="#rightLayout" prefHeight="43.0" prefWidth="65.0" text="右布局" />
+       <Button fx:id="autoLayout" layoutX="723.0" layoutY="14.0" mnemonicParsing="false" onAction="#autoLayout" prefHeight="43.0" prefWidth="65.0" text="自动布局" />
+       <Button fx:id="deleteBut" layoutX="370.0" layoutY="14.0" mnemonicParsing="false" onAction="#deleteNode" prefHeight="43.0" prefWidth="101.0" text="删除节点" />
+       <MenuBar layoutX="14.0" layoutY="14.0" prefHeight="43.0" prefWidth="95.0" AnchorPane.bottomAnchor="596.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="897.3333333333334" AnchorPane.topAnchor="14.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="newFile" mnemonicParsing="false" onAction="#newFile" text="new" />
+                  <MenuItem fx:id="openFile" mnemonicParsing="false" onAction="#openFile" text="open" />
+                  <MenuItem fx:id="export" mnemonicParsing="false" onAction="#export" text="daochu" />
+                  <MenuItem fx:id="save" mnemonicParsing="false" onAction="#save" text="save" />
+            </items>
+          </Menu>
+        </menus>
+         <effect>
+            <Blend />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </MenuBar>
+      <TreeView fx:id="treeView" layoutX="817.0" layoutY="-1.0" prefHeight="653.0" prefWidth="185.0" />
+   </children>
+</AnchorPane>
